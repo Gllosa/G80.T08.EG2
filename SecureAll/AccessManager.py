@@ -2,6 +2,7 @@ import json
 from .AccessManagementException import AccessManagementException
 from .AccessRequest import AccessRequest
 
+
 class AccessManager:
     def __init__(self):
         pass
@@ -20,7 +21,6 @@ class AccessManager:
             raise AccessManagementException("Wrong file or file path") from e
         except json.JSONDecodeError as e:
             raise AccessManagementException("JSON Decode Error - Wrong JSON Format") from e
-
 
         try:
             idDoc = DATA["id"]

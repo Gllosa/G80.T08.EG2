@@ -2,6 +2,7 @@ import json
 from datetime import datetime
 import pandas
 
+
 class AccessRequest:
     def __init__(self, idDocument, fullName):
         self.__name = fullName
@@ -15,6 +16,7 @@ class AccessRequest:
     @property
     def Name(self):
         return self.__name
+
     @Name.setter
     def Name(self, value):
         self.__name = value
@@ -22,6 +24,7 @@ class AccessRequest:
     @property
     def idDocument(self):
         return self.__idDocument
+
     @Name.setter
-    def idDocument(self,value):
+    def idDocument(self, value):
         self.__idDocument = value
