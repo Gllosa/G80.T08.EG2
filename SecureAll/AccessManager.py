@@ -8,9 +8,11 @@ class AccessManager:
         pass
 
     def ValidateDNI(self, DNI):
-        # PLEASE INCLUDE HERE THE CODE FOR VALIDATING THE DNI
-        # RETURN TRUE IF THE DNI IS RIGHT, OR FALSE IN OTHER CASE
-        return True
+        letters = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B",
+                   "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"]
+        dniNumber = int(DNI[0:-1])
+        index = dniNumber % 23
+        return letters[index] == DNI[-1]
 
     def ReadaccessrequestfromJSON(self, fi):
 
