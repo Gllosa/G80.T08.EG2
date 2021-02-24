@@ -8,11 +8,18 @@ class AccessManager:
         pass
 
     def ValidateDNI(self, DNI):
+        strNumberDni = DNI[0:-1]
+        # Comprobar que el dni tiene 8 numeros seguidos de una letra
+        if len(strNumberDni) != 8:
+            return False
+        numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        for char in strNumberDni:
+            if int(char) not in numbers:
+                return False
         letters = ["T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B",
                    "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"]
-        dniNumber = int(DNI[0:-1])
-        index = dniNumber % 23
-        return letters[index] == DNI[-1]
+        index = int(strNumberDni) % 23
+        return letters[index] == DNI[-1].upper()
 
     def ReadaccessrequestfromJSON(self, fi):
 
