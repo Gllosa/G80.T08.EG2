@@ -5,15 +5,15 @@ Fecha de ultima mod.: indeterminada"""
 class AccessManagementException(Exception):
     # Metodo init
     def __init__(self, message):
-        self.message = message
+        self.privMessage = message
         super().__init__(self.message)
 
     # Getter de message
     @property
     def message(self):
-        return self.message
+        return self.privMessage
 
     # Setter de message
     @message.setter
     def message(self, value):
-        self.message = value
+        self.privMessage = value

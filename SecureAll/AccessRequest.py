@@ -8,8 +8,8 @@ from datetime import datetime
 class AccessRequest:
     # Metodo init
     def __init__(self, idDocument, fullName):
-        self.name = fullName
-        self.idDocument = idDocument
+        self.privName = fullName
+        self.privIdDocument = idDocument
         justnow = datetime.utcnow()
         self.timeStamp = datetime.timestamp(justnow)
     # Metodo para reconocer clase como string
@@ -19,19 +19,19 @@ class AccessRequest:
     # Getter de name
     @property
     def name(self):
-        return self.name
+        return self.privName
 
     # Setter de name
     @name.setter
     def name(self, value):
-        self.name = value
+        self.privName = value
 
     # Getter de idDocument
     @property
     def idDocument(self):
-        return self.idDocument
+        return self.privIdDocument
 
     # Setter de idDocument
     @idDocument.setter
     def idDocument(self, value):
-        self.idDocument = value
+        self.privIdDocument = value
