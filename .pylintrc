@@ -6,6 +6,9 @@ max-nested-blocks = 4
 
 [BASIC]
 
+# Estilo de nombrado de atributos
+module-naming-style=PascalCase
+
 # Estilo de nombrado de argumentos.
 argument-naming-style=camelCase
 
