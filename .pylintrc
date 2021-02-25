@@ -6,7 +6,10 @@ max-nested-blocks = 4
 
 [BASIC]
 
-# Estilo de nombrado de atributos
+# Nombres que no se deben usar
+bad-names=kk, caca
+
+# Estilo de nombrado de módulo
 module-naming-style=PascalCase
 
 # Estilo de nombrado de argumentos.
@@ -49,11 +52,11 @@ indent-after-paren=4
 indent-string='    '
 
 # Número máximo de caracteres por línea.
-max-line-length=90
+max-line-length=100
 
 [DESIGN]
 
-# Número mámixo de argumentos qu puede recibir un método.
+# Número mámixo de argumentos que puede recibir un método.
 max-args=7
 
 # Número máximo de buleanos en un if.
