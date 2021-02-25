@@ -1,30 +1,37 @@
+""" Atores: UC3M
+Fecha de ultima mod.: indeterminada"""
+
 import json
 from datetime import datetime
-import pandas
 
-
+# Clase de peticion de acceso
 class AccessRequest:
+    # Metodo init
     def __init__(self, idDocument, fullName):
-        self.__name = fullName
-        self.__idDocument = idDocument
+        self.name = fullName
+        self.idDocument = idDocument
         justnow = datetime.utcnow()
-        self.__timeStamp = datetime.timestamp(justnow)
-
+        self.timeStamp = datetime.timestamp(justnow)
+    # Metodo para reconocer clase como string
     def __str__(self):
         return "AccessRequest:" + json.dumps(self.__dict__)
 
+    # Getter de name
     @property
-    def Name(self):
-        return self.__name
+    def name(self):
+        return self.name
 
-    @Name.setter
-    def Name(self, value):
-        self.__name = value
+    # Setter de name
+    @name.setter
+    def name(self, value):
+        self.name = value
 
+    # Getter de idDocument
     @property
     def idDocument(self):
-        return self.__idDocument
+        return self.idDocument
 
-    @Name.setter
+    # Setter de idDocument
+    @idDocument.setter
     def idDocument(self, value):
-        self.__idDocument = value
+        self.idDocument = value

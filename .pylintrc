@@ -39,8 +39,8 @@ method-naming-style=camelCase
 docstring-min-length=2
 
 # Expresión regular para indicar las funciones que
-# no requieren un comentario.
-no-docstring-rgx=^_
+# no requieren un comentario. (implementado en MASTER)
+# no-docstring-rgx=
 
 [FORMAT]
 
@@ -52,12 +52,18 @@ indent-after-paren=4
 indent-string='    '
 
 # Número máximo de caracteres por línea.
-max-line-length=100
+max-line-length=150
 
 [DESIGN]
 
 # Número mámixo de argumentos que puede recibir un método.
 max-args=7
 
-# Número máximo de buleanos en un if.
+# Número máximo de booleanos en un if.
 max-bool-expr=6
+[MASTER]
+
+# Deshabilitar los errores por falta de docstring en clases (C0115) y en metodos (C0116)
+disable=
+    C0115,
+    C0116,
