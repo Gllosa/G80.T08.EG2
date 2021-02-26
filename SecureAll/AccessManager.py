@@ -8,10 +8,11 @@ from .AccessRequest import AccessRequest
 class AccessManager:
     # Metodo init
     def __init__(self):
-        pass
+        self.dni = None
 
     # Metodo que valida el DNI
     def validateDNI(self, dni):
+        self.dni = dni
         str_number_dni = dni[0:-1]
         # Comprobar que el dni tiene 8 numeros seguidos de una letra
         if len(str_number_dni) != 8:
