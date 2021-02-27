@@ -1,5 +1,5 @@
-""" Creado por: UC3M
-    Fecha de mod.: 20/02/2021"""
+""" Colaboradores: UC3M, Gonzalo Llosa, Diego Robles
+    Fecha: 26/02/2021"""
 import json
 from .AccessManagementException import AccessManagementException
 from .AccessRequest import AccessRequest

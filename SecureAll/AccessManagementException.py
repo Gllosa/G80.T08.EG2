@@ -1,5 +1,5 @@
-""" Atores: UC3M
-Fecha de ultima mod.: indeterminada"""
+""" Colaboradores: UC3M, Gonzalo Llosa, Diego Robles
+    Fecha: 26/02/2021"""
 
 # Clase excepcion de acceso
 class AccessManagementException(Exception):
